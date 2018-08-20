@@ -1,0 +1,153 @@
+function [BDav, fa_mean] = coolcap_FA(dirname)
+% derived from NPH_UMND_process.m
+% Added DICOM read, manual slice select for coolcap
+% Compute ADC histogram, 
+% dirname is where the case resides
+%   Detailed explanation goes here (maybe someday)
+
+clear all;
+codedir = pwd;
+cd(codedir);
+dirname = 'C:\coolcap\example_data';
+thresh_ratio = 0.06;
+
+% ask for input directory 
+user_path = uigetdir(dirname, 'Select directory containing dicoms of interest (CANCEL to accept suggested)');
+if ~isequal(user_path,0)    
+    dirname = user_path;
+end
+cd(dirname);
+[read_success, found_dicom] = preview_dicoms;
+if ~read_success
+    if found_dicom
+        % ask again for input directory 
+        user_path = uigetdir(dirname, 'Try again: Select directory containing dicoms of interest (CANCEL to accept suggested)');
+        if ~isequal(user_path,0)    
+            dirname = user_path;
+        end
+        cd(dirname);
+    else
+        error('selectedt folder does not contain subfolders with readable DICOMS!');
+    end
+end
+
+cd(dirname);
+D = dir(pwd);
+imgind = find(~[D.isdir]);
+info = dicominfo(D(imgind(1)).name);
+if ~strcmp(info.SeriesDescription, 'AXL DWI')
+    disp('WARNING: this does not appear to be Axial DWI data!!');
+end
+nrows = info.Rows;
+ncols = info.Columns;
+nslices = info.ImagesInAcquisition,
+imagesize = [nrows, ncols, nslices];
+outimages = zeros(imagesize);
+outmasks = zeros(imagesize);
+for i = 1:length(imgind)
+    info = dicominfo(D(imgind(i)).name);
+    imgnum(i) = info.InstanceNumber;
+    rawdata(:,:,i) = single(dicomread(info));
+end
+rawdata = rawdata(:,:, imgnum);
+[nrows, ncols, nslices] = size(rawdata);
+
+mask=(rawdata>=thresh_ratio*max(abs(rawdata(:))));
+rawdata=mask.*rawdata;
+    
+    % Now get user to input ROIs 
+    figure; montage(reshape(uint8(255*rawdata/max(rawdata(:))), [imagesize(1:2), 1, imagesize(3)])); 
+    title('images, left to right, top to bottom');
+    h1 = gcf;
+    vals = []; 
+    inds = [];
+    user_done = false; 
+    while ~user_done
+        user_slice = sscanf(char(inputdlg(sprintf('input slice number to select ROI'))), '%03d');
+        q = rawdata(:,:,user_slice);
+        figure; imshow(uint8(255*q/max(q(:)))); truesize(size(q)*1.5); h2 = gcf;   zoom(2); 
+        figure(h2);
+        [bw, xi, yi] = roipoly;
+        inds = [inds; f];
+        vals = [vals; q(find(bw))];
+        button = questdlg('Select another ROI?','ROI Select', 'No');
+        if strcmp(button, 'No') | strcmp(button, 'Cancel')
+            user_done = true;
+        end
+    end
+    delete(h1); delete(h2);
+    favals_left = favals_left/fa_norm_fact;
+    favals_right = favals_right/fa_norm_fact;
+    famean_left = mean(favals_left(:));
+    famean_right = mean(favals_right(:));
+    fastd_left = std(favals_left(:));
+    fastd_right = std(favals_right(:));
+    famin_left = min(favals_left(:));
+    famin_right = min(favals_right(:));
+    famax_left = max(favals_left(:));
+    famax_right = max(favals_right(:));
+    fa_mean = mean([famean_left, famean_right]);
+    clear FA favals_left favals_right;
+    fa_zscore = (fa_mean - normal_fa_mean)/normal_fa_std;
+    if abs(fa_zscore) < 1
+        z_string = 'within ONE ';
+        normal_string = 'WITHIN NORMAL RANGE';
+    elseif abs(fa_zscore) < 2
+        z_string = 'more than ONE ';
+        normal_string = 'OUTSIDE NORMAL RANGE';
+    elseif abs(fa_zscore) > 2
+        z_string = 'more than TWO ';
+        normal_string = 'significantly OUTSIDE NORMAL RANGE';
+    end    
+    if fa_zscore < 0
+        above_string = 'below ';
+    else
+        above_string = 'above ';
+    end
+    q = cell(9,1);
+    q{1} = famean_left; q{2} = famean_right; q{3} = fa_mean;
+    q{4} = normal_fa_mean; q{5} = normal_fa_std;
+    q{6} = fa_zscore;
+    q{7} = z_string;
+    q{8} = above_string;
+    q{9} = normal_string;
+    q{10} = fastd_left;
+    q{11} = fastd_right;
+    q{12} = famin_left;
+    q{13} = famin_right;
+    q{14} = famax_left;
+    q{15} = famax_right;
+    
+     [success, message] = xlswrite(xlsfile, q, '', 'B24');
+    if ~success
+        ErrorString = sprintf('WARNING: Excel save of dicominfo may not have worked - please check! MATLAB returned following error:\n %s', message.message);
+        errordlg(ErrorString, 'Possible error in saving data to Excel');
+    end
+
+    xlscell = cell(8,2);
+    xlscell{1,1} = 'StudyDate:';
+    xlscell{1,2} = info.StudyDate;
+    xlscell{2,1} = 'Width:';
+    xlscell{2,2} = info.Width;
+    xlscell{3,1} = 'Height:';
+    xlscell{3,2} = info.Height;
+    xlscell{4,1} = 'BitDepth:';
+    xlscell{4,2} = info.BitDepth;
+    xlscell{5,1} = 'SliceThickness:';
+    xlscell{5,2} = info.SliceThickness;
+    xlscell{6,1} = 'RepetitionTime:';
+    xlscell{6,2} = info.RepetitionTime;
+    xlscell{7,1} = 'EchoTime:';
+    xlscell{7,2} = info.EchoTime;
+    xlscell{8,1} = 'FlipAngle:';
+    xlscell{8,2} = info.FlipAngle;
+ 
+    [success, message] = xlswrite(xlsfile, xlscell, '', 'A40');
+    if ~success
+        ErrorString = sprintf('WARNING: Excel save of dicominfo may not have worked - please check! MATLAB returned following error:\n %s', message.message);
+        errordlg(ErrorString, 'Possible error in saving data to Excel');
+    end
+    dos(sprintf('%s &', xlsfile));
+    %dos(sprintf('%s &', umnd_reportfile));
+end
+% ********************* End process UMND cases ****************************

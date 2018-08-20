@@ -1,0 +1,223 @@
+ nondecimatedWaveletReconstruction3D_mex
+
+ Timestamp is 5048ccb2 (Thu Sep 06 12:17:54 2012)
+
+ Preferred load address is 0000000180000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00009282H .text                   CODE
+ 0001:00009290 00000092H .text$x                 CODE
+ 0002:00000000 000001d8H .idata$5                DATA
+ 0002:000001d8 00000008H .CRT$XCA                DATA
+ 0002:000001e0 00000008H .CRT$XCZ                DATA
+ 0002:000001e8 00000008H .CRT$XIA                DATA
+ 0002:000001f0 00000008H .CRT$XIAA               DATA
+ 0002:000001f8 00000008H .CRT$XIZ                DATA
+ 0002:00000200 00000570H .rdata                  DATA
+ 0002:00000770 00000008H .rtc$IAA                DATA
+ 0002:00000778 00000008H .rtc$IZZ                DATA
+ 0002:00000780 00000008H .rtc$TAA                DATA
+ 0002:00000788 00000008H .rtc$TZZ                DATA
+ 0002:00000790 00000260H .xdata                  DATA
+ 0002:000009f0 00000064H .idata$2                DATA
+ 0002:00000a54 00000014H .idata$3                DATA
+ 0002:00000a68 000001d8H .idata$4                DATA
+ 0002:00000c40 00000476H .idata$6                DATA
+ 0002:000010c0 0000010cH .edata                  DATA
+ 0003:00000000 00000298H .data                   DATA
+ 0003:000002a0 000005b8H .bss                    DATA
+ 0004:00000000 00000234H .pdata                  DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __ImageBase                0000000180000000     <linker-defined>
+ 0001:00000240       nondecimatedWaveletReconstruction3D_atexit 0000000180001240 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00000250       nondecimatedWaveletReconstruction3D_initialize 0000000180001250 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00000280       nondecimatedWaveletReconstruction3D_terminate 0000000180001280 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000064e0       nondecimatedWaveletReconstruction3D 00000001800074e0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00008530       nondecimatedWaveletReconstruction3D_api 0000000180009530 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000087d0       mexFunction                00000001800097d0 f   nondecimatedWaveletReconstruction3D_mex.obj
+ 0001:00008834       mxCreateNumericArray_700   0000000180009834 f   libmx:libmx.dll
+ 0001:0000883a       mexErrMsgIdAndTxt          000000018000983a f   libmex:libmex.dll
+ 0001:00008840       mexAtExit                  0000000180009840 f   libmex:libmex.dll
+ 0001:00008846       emlrtAssign                0000000180009846 f   libemlrt:libemlrt.dll
+ 0001:0000884c       emlrtExportNumericArrayR2008b 000000018000984c f   libemlrt:libemlrt.dll
+ 0001:00008852       emlrtPushHeapReferenceStack 0000000180009852 f   libemlrt:libemlrt.dll
+ 0001:00008858       emlrtExitTimeCleanup       0000000180009858 f   libemlrt:libemlrt.dll
+ 0001:0000885e       emlrtFirstTime             000000018000985e f   libemlrt:libemlrt.dll
+ 0001:00008864       emlrtEnterRtStack          0000000180009864 f   libemlrt:libemlrt.dll
+ 0001:0000886a       emlrtLeaveRtStack          000000018000986a f   libemlrt:libemlrt.dll
+ 0001:00008870       emlrtDestroyArray          0000000180009870 f   libemlrt:libemlrt.dll
+ 0001:00008876       emlrtImportArrayR2008b     0000000180009876 f   libemlrt:libemlrt.dll
+ 0001:0000887c       emlrtCheckVsBuiltInR2011a  000000018000987c f   libemlrt:libemlrt.dll
+ 0001:00008882       emlrtHeapReferenceStackLeaveFcn 0000000180009882 f   libemlrt:libemlrt.dll
+ 0001:00008888       emlrtHeapReferenceStackEnterFcn 0000000180009888 f   libemlrt:libemlrt.dll
+ 0001:0000888e       emlrtAlias                 000000018000988e f   libemlrt:libemlrt.dll
+ 0001:00008894       emlrtIntegerCheckR2011a    0000000180009894 f   libemlrt:libemlrt.dll
+ 0001:0000889a       emlrtAliasP                000000018000989a f   libemlrt:libemlrt.dll
+ 0001:000088a0       emlrtReturnArrayR2009a     00000001800098a0 f   libemlrt:libemlrt.dll
+ 0001:000088a6       emlrtClearAllocCount       00000001800098a6 f   libemlrt:libemlrt.dll
+ 0001:000088ac       memcpy                     00000001800098ac f   MSVCRT:MSVCR100.dll
+ 0001:000088b4       __GSHandlerCheckCommon     00000001800098b4 f   MSVCRT:gshandler.obj
+ 0001:00008918       __GSHandlerCheck           0000000180009918 f   MSVCRT:gshandler.obj
+ 0001:00008950       __security_check_cookie    0000000180009950 f   MSVCRT:amdsecgs.obj
+ 0001:00008980       _alloca_probe              0000000180009980     MSVCRT:chkstk.obj
+ 0001:00008980       __chkstk                   0000000180009980 f   MSVCRT:chkstk.obj
+ 0001:00008a30       _CRT_INIT                  0000000180009a30 f   MSVCRT:crtdll.obj
+ 0001:00008dc8       _DllMainCRTStartup         0000000180009dc8 f   MSVCRT:crtdll.obj
+ 0001:00008e08       __report_gsfailure         0000000180009e08 f   MSVCRT:gs_report.obj
+ 0001:00008f54       __clean_type_info_names    0000000180009f54 f   MSVCRT:tncleanup.obj
+ 0001:00008f60       _onexit                    0000000180009f60 f   MSVCRT:atonexit.obj
+ 0001:00009010       atexit                     000000018000a010 f   MSVCRT:atonexit.obj
+ 0001:00009028       _RTC_Initialize            000000018000a028 f   MSVCRT:_initsect_.obj
+ 0001:00009060       _RTC_Terminate             000000018000a060 f   MSVCRT:_initsect_.obj
+ 0001:000090a0       _ValidateImageBase         000000018000a0a0 f   MSVCRT:pesect.obj
+ 0001:000090d0       _FindPESection             000000018000a0d0 f   MSVCRT:pesect.obj
+ 0001:00009120       _IsNonwritableInCurrentImage 000000018000a120 f   MSVCRT:pesect.obj
+ 0001:00009162       _initterm                  000000018000a162 f   MSVCRT:MSVCR100.dll
+ 0001:00009168       _initterm_e                000000018000a168 f   MSVCRT:MSVCR100.dll
+ 0001:0000916e       _amsg_exit                 000000018000a16e f   MSVCRT:MSVCR100.dll
+ 0001:00009174       __C_specific_handler       000000018000a174 f   MSVCRT:MSVCR100.dll
+ 0001:0000917a       __CppXcptFilter            000000018000a17a f   MSVCRT:MSVCR100.dll
+ 0001:00009180       DllMain                    000000018000a180 f   MSVCRT:dllmain.obj
+ 0001:000091a4       __security_init_cookie     000000018000a1a4 f   MSVCRT:gs_support.obj
+ 0001:00009258       __crt_debugger_hook        000000018000a258 f   MSVCRT:MSVCR100.dll
+ 0001:0000925e       __clean_type_info_names_internal 000000018000a25e f   MSVCRT:MSVCR100.dll
+ 0001:00009264       _unlock                    000000018000a264 f   MSVCRT:MSVCR100.dll
+ 0001:0000926a       __dllonexit                000000018000a26a f   MSVCRT:MSVCR100.dll
+ 0001:00009270       _lock                      000000018000a270 f   MSVCRT:MSVCR100.dll
+ 0001:00009276       RtlVirtualUnwind           000000018000a276 f   kernel32:KERNEL32.dll
+ 0001:0000927c       RtlLookupFunctionEntry     000000018000a27c f   kernel32:KERNEL32.dll
+ 0002:00000000       __imp_GetSystemTimeAsFileTime 000000018000b000     kernel32:KERNEL32.dll
+ 0002:00000008       __imp_GetCurrentProcessId  000000018000b008     kernel32:KERNEL32.dll
+ 0002:00000010       __imp_GetCurrentThreadId   000000018000b010     kernel32:KERNEL32.dll
+ 0002:00000018       __imp_GetTickCount         000000018000b018     kernel32:KERNEL32.dll
+ 0002:00000020       __imp_QueryPerformanceCounter 000000018000b020     kernel32:KERNEL32.dll
+ 0002:00000028       __imp_DisableThreadLibraryCalls 000000018000b028     kernel32:KERNEL32.dll
+ 0002:00000030       __imp_RtlCaptureContext    000000018000b030     kernel32:KERNEL32.dll
+ 0002:00000038       __imp_RtlLookupFunctionEntry 000000018000b038     kernel32:KERNEL32.dll
+ 0002:00000040       __imp_RtlVirtualUnwind     000000018000b040     kernel32:KERNEL32.dll
+ 0002:00000048       __imp_IsDebuggerPresent    000000018000b048     kernel32:KERNEL32.dll
+ 0002:00000050       __imp_SetUnhandledExceptionFilter 000000018000b050     kernel32:KERNEL32.dll
+ 0002:00000058       __imp_UnhandledExceptionFilter 000000018000b058     kernel32:KERNEL32.dll
+ 0002:00000060       __imp_GetCurrentProcess    000000018000b060     kernel32:KERNEL32.dll
+ 0002:00000068       __imp_TerminateProcess     000000018000b068     kernel32:KERNEL32.dll
+ 0002:00000070       __imp_Sleep                000000018000b070     kernel32:KERNEL32.dll
+ 0002:00000078       __imp_DecodePointer        000000018000b078     kernel32:KERNEL32.dll
+ 0002:00000080       __imp_EncodePointer        000000018000b080     kernel32:KERNEL32.dll
+ 0002:00000088       \177KERNEL32_NULL_THUNK_DATA 000000018000b088     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__onexit              000000018000b090     MSVCRT:MSVCR100.dll
+ 0002:00000098       __imp__lock                000000018000b098     MSVCRT:MSVCR100.dll
+ 0002:000000a0       __imp___dllonexit          000000018000b0a0     MSVCRT:MSVCR100.dll
+ 0002:000000a8       __imp__unlock              000000018000b0a8     MSVCRT:MSVCR100.dll
+ 0002:000000b0       __imp___clean_type_info_names_internal 000000018000b0b0     MSVCRT:MSVCR100.dll
+ 0002:000000b8       __imp_free                 000000018000b0b8     MSVCRT:MSVCR100.dll
+ 0002:000000c0       __imp_calloc               000000018000b0c0     MSVCRT:MSVCR100.dll
+ 0002:000000c8       __imp_memcpy               000000018000b0c8     MSVCRT:MSVCR100.dll
+ 0002:000000d0       __imp_malloc               000000018000b0d0     MSVCRT:MSVCR100.dll
+ 0002:000000d8       __imp__malloc_crt          000000018000b0d8     MSVCRT:MSVCR100.dll
+ 0002:000000e0       __imp__initterm            000000018000b0e0     MSVCRT:MSVCR100.dll
+ 0002:000000e8       __imp__initterm_e          000000018000b0e8     MSVCRT:MSVCR100.dll
+ 0002:000000f0       __imp__encoded_null        000000018000b0f0     MSVCRT:MSVCR100.dll
+ 0002:000000f8       __imp__amsg_exit           000000018000b0f8     MSVCRT:MSVCR100.dll
+ 0002:00000100       __imp___C_specific_handler 000000018000b100     MSVCRT:MSVCR100.dll
+ 0002:00000108       __imp___CppXcptFilter      000000018000b108     MSVCRT:MSVCR100.dll
+ 0002:00000110       __imp___crt_debugger_hook  000000018000b110     MSVCRT:MSVCR100.dll
+ 0002:00000118       \177MSVCR100_NULL_THUNK_DATA 000000018000b118     MSVCRT:MSVCR100.dll
+ 0002:00000120       __imp_emlrtClearAllocCount 000000018000b120     libemlrt:libemlrt.dll
+ 0002:00000128       __imp_emlrtReturnArrayR2009a 000000018000b128     libemlrt:libemlrt.dll
+ 0002:00000130       __imp_emlrtAliasP          000000018000b130     libemlrt:libemlrt.dll
+ 0002:00000138       __imp_emlrtIntegerCheckR2011a 000000018000b138     libemlrt:libemlrt.dll
+ 0002:00000140       __imp_emlrtAlias           000000018000b140     libemlrt:libemlrt.dll
+ 0002:00000148       __imp_emlrtHeapReferenceStackEnterFcn 000000018000b148     libemlrt:libemlrt.dll
+ 0002:00000150       __imp_emlrtHeapReferenceStackLeaveFcn 000000018000b150     libemlrt:libemlrt.dll
+ 0002:00000158       __imp_emlrtCheckVsBuiltInR2011a 000000018000b158     libemlrt:libemlrt.dll
+ 0002:00000160       __imp_emlrtImportArrayR2008b 000000018000b160     libemlrt:libemlrt.dll
+ 0002:00000168       __imp_emlrtDestroyArray    000000018000b168     libemlrt:libemlrt.dll
+ 0002:00000170       __imp_emlrtLeaveRtStack    000000018000b170     libemlrt:libemlrt.dll
+ 0002:00000178       __imp_emlrtEnterRtStack    000000018000b178     libemlrt:libemlrt.dll
+ 0002:00000180       __imp_emlrtFirstTime       000000018000b180     libemlrt:libemlrt.dll
+ 0002:00000188       __imp_emlrtExitTimeCleanup 000000018000b188     libemlrt:libemlrt.dll
+ 0002:00000190       __imp_emlrtPushHeapReferenceStack 000000018000b190     libemlrt:libemlrt.dll
+ 0002:00000198       __imp_emlrtExportNumericArrayR2008b 000000018000b198     libemlrt:libemlrt.dll
+ 0002:000001a0       __imp_emlrtAssign          000000018000b1a0     libemlrt:libemlrt.dll
+ 0002:000001a8       \177libemlrt_NULL_THUNK_DATA 000000018000b1a8     libemlrt:libemlrt.dll
+ 0002:000001b0       __imp_mexAtExit            000000018000b1b0     libmex:libmex.dll
+ 0002:000001b8       __imp_mexErrMsgIdAndTxt    000000018000b1b8     libmex:libmex.dll
+ 0002:000001c0       \177libmex_NULL_THUNK_DATA 000000018000b1c0     libmex:libmex.dll
+ 0002:000001c8       __imp_mxCreateNumericArray_700 000000018000b1c8     libmx:libmx.dll
+ 0002:000001d0       \177libmx_NULL_THUNK_DATA  000000018000b1d0     libmx:libmx.dll
+ 0002:000001d8       __xc_a                     000000018000b1d8     MSVCRT:cinitexe.obj
+ 0002:000001e0       __xc_z                     000000018000b1e0     MSVCRT:cinitexe.obj
+ 0002:000001e8       __xi_a                     000000018000b1e8     MSVCRT:cinitexe.obj
+ 0002:000001f8       __xi_z                     000000018000b1f8     MSVCRT:cinitexe.obj
+ 0002:00000200       ??_C@_0FF@HGKGLALE@X?3?1Projects?1ApproximateNullVec?1d@ 000000018000b200     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000258       ??_C@_0CE@DHMMANLI@nondecimatedWaveletReconstructio@ 000000018000b258     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000610       ??_C@_06BNJCAIGJ@double?$AA@ 000000018000b610     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000618       __real@3ff0000000000000    000000018000b618     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000620       __real@4020000000000000    000000018000b620     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000628       __real@401c000000000000    000000018000b628     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000630       __real@4018000000000000    000000018000b630     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000638       __real@4014000000000000    000000018000b638     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000640       __real@4010000000000000    000000018000b640     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000648       __real@4008000000000000    000000018000b648     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000650       __real@4000000000000000    000000018000b650     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000658       ??_C@_01FHEEJDEE@A?$AA@    000000018000b658     nondecimatedWaveletReconstruction3D.obj
+ 0002:00000660       ??_C@_0CH@DLJMAEFE@emlcoder?3emlmex?3TooManyOutputArg@ 000000018000b660     nondecimatedWaveletReconstruction3D_mex.obj
+ 0002:00000690       ??_C@_0FB@BIPNPODD@Too?5many?5output?5arguments?5for?5en@ 000000018000b690     nondecimatedWaveletReconstruction3D_mex.obj
+ 0002:000006e8       ??_C@_0CE@IHHIPLIO@emlcoder?3emlmex?3WrongNumberOfInp@ 000000018000b6e8     nondecimatedWaveletReconstruction3D_mex.obj
+ 0002:00000710       ??_C@_0EI@BABAEOAF@1?5input?5required?5for?5entry?9point@ 000000018000b710     nondecimatedWaveletReconstruction3D_mex.obj
+ 0002:00000758       _pRawDllMain               000000018000b758     MSVCRT:crtdll.obj
+ 0002:00000758       _pDefaultRawDllMain        000000018000b758     MSVCRT:crtdll.obj
+ 0002:00000770       __rtc_iaa                  000000018000b770     MSVCRT:_initsect_.obj
+ 0002:00000778       __rtc_izz                  000000018000b778     MSVCRT:_initsect_.obj
+ 0002:00000780       __rtc_taa                  000000018000b780     MSVCRT:_initsect_.obj
+ 0002:00000788       __rtc_tzz                  000000018000b788     MSVCRT:_initsect_.obj
+ 0002:000009f0       __IMPORT_DESCRIPTOR_libmx  000000018000b9f0     libmx:libmx.dll
+ 0002:00000a04       __IMPORT_DESCRIPTOR_libmex 000000018000ba04     libmex:libmex.dll
+ 0002:00000a18       __IMPORT_DESCRIPTOR_libemlrt 000000018000ba18     libemlrt:libemlrt.dll
+ 0002:00000a2c       __IMPORT_DESCRIPTOR_MSVCR100 000000018000ba2c     MSVCRT:MSVCR100.dll
+ 0002:00000a40       __IMPORT_DESCRIPTOR_KERNEL32 000000018000ba40     kernel32:KERNEL32.dll
+ 0002:00000a54       __NULL_IMPORT_DESCRIPTOR   000000018000ba54     libmx:libmx.dll
+ 0003:00000240       emlrtContextGlobal         000000018000d240     nondecimatedWaveletReconstruction3D_mex.obj
+ 0003:00000278       _fltused                   000000018000d278     MSVCRT:dllsupp.obj
+ 0003:00000280       __security_cookie          000000018000d280     MSVCRT:gs_cookie.obj
+ 0003:00000288       __security_cookie_complement 000000018000d288     MSVCRT:gs_cookie.obj
+ 0003:00000290       __native_dllmain_reason    000000018000d290     MSVCRT:natstart.obj
+ 0003:00000294       __native_vcclrit_reason    000000018000d294     MSVCRT:natstart.obj
+ 0003:00000820       ?__type_info_root_node@@3U__type_info_node@@A 000000018000d820     MSVCRT:tncleanup.obj
+ 0003:00000830       __native_startup_state     000000018000d830     <common>
+ 0003:00000838       __native_startup_lock      000000018000d838     <common>
+ 0003:00000840       __onexitend                000000018000d840     <common>
+ 0003:00000848       __onexitbegin              000000018000d848     <common>
+ 0003:00000850       __dyn_tls_init_callback    000000018000d850     <common>
+
+ entry point at        0001:00008dc8
+
+ Static symbols
+
+ 0001:00000000       emxEnsureCapacity          0000000180001000 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000000d0       emxFree_creal_T            00000001800010d0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000000d0       emxFree_int32_T            00000001800010d0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000000d0       emxFree_real_T             00000001800010d0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00000120       squeeze                    0000000180001120 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00000290       c_emlrt_marshallIn         0000000180001290 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00000420       conv                       0000000180001420 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000006e0       d_conv                     00000001800016e0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000009a0       d_singleBlockRecon         00000001800019a0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00001510       e_singleBlockRecon         0000000180002510 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00002080       f_singleBlockRecon         0000000180003080 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00002bf0       g_singleBlockRecon         0000000180003bf0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00003750       h_singleBlockRecon         0000000180004750 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:000042b0       singleBlockRecon           00000001800052b0 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00004e10       b_singleBlockRecon         0000000180005e10 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00005970       c_singleBlockRecon         0000000180006970 f   nondecimatedWaveletReconstruction3D.obj
+ 0001:00008720       nondecimatedWaveletReconstruction3D_mexFunction 0000000180009720 f   nondecimatedWaveletReconstruction3D_mex.obj
+ 0001:000089d0       pre_c_init                 00000001800099d0 f   MSVCRT:crtdll.obj
+ 0001:00008c8c       __DllMainCRTStartup        0000000180009c8c f   MSVCRT:crtdll.obj
+ 0001:00009290       __DllMainCRTStartup$filt$0 000000018000a290 f   MSVCRT:crtdll.obj
+ 0001:000092c0       __DllMainCRTStartup$fin$1  000000018000a2c0 f   MSVCRT:crtdll.obj
+ 0001:000092da       _onexit$fin$0              000000018000a2da f   MSVCRT:atonexit.obj
+ 0001:00009300       _IsNonwritableInCurrentImage$filt$0 000000018000a300 f   MSVCRT:pesect.obj

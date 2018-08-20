@@ -1,0 +1,8 @@
+libemlrt.lib
+libut.lib
+libmwblascompat32.lib
+libmwmathutil.lib
+/export:mexFunction
+/export:nondecimatedWaveletReconstruction3D
+/export:nondecimatedWaveletReconstruction3D_initialize
+/export:nondecimatedWaveletReconstruction3D_terminate
